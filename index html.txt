@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>인클라이밍센터 이용 동의서 및 신청서</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+    h2 { color: #2c3e50; }
+    .section { margin-bottom: 25px; }
+    label { display: block; margin: 8px 0; }
+    input[type="checkbox"], input[type="radio"] { margin-right: 8px; }
+    .submit-btn { background: #27ae60; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    .submit-btn:hover { background: #2ecc71; }
+  </style>
+</head>
+<body>
+  <h2>인클라이밍센터 이용 동의서 및 신청서</h2>
+
+  <form id="climbingForm">
+    <div class="section">
+      <h3>기본 동의</h3>
+      <label><input type="checkbox" name="riskAgree"> 스포츠클라이밍은 위험요소가 있으며 모든 사고 책임은 본인에게 있음을 동의합니다.</label>
+    </div>
+
+    <div class="section">
+      <h3>대표적인 위험 요소</h3>
+      <label><input type="checkbox" name="risk" value="추락"> 등반벽 추락 및 충돌</label>
+      <label><input type="checkbox" name="risk" value="로프"> 로프 마멸, 얽힘, 조작 실수</label>
+      <label><input type="checkbox" name="risk" value="장비"> 장비 착용 및 조작 실수</label>
+      <label><input type="checkbox" name="risk" value="타인"> 파트너/타인 과실</label>
+      <label><input type="checkbox" name="risk" value="물체"> 장비·홀드·물체 추락</label>
+    </div>
+
+    <div class="section">
+      <h3>이용 및 안전 수칙</h3>
+      <label><input type="checkbox" name="rules" value="관리자"> 관리자의 지시 준수</label>
+      <label><input type="checkbox" name="rules" value="질서"> 질서 유지</label>
+      <label><input type="checkbox" name="rules" value="소지품"> 소지품 분실 책임 본인 부담</label>
+      <label><input type="checkbox" name="rules" value="시설물"> 시설물 훼손 시 본인 책임</label>
+      <label><input type="checkbox" name="rules" value="강습없음"> 강습 없음</label>
+      <label><input type="checkbox" name="rules" value="장비"> 장비 개인 준비</label>
+      <label><input type="checkbox" name="rules" value="초크"> 비치된 초크만 사용</label>
+      <label><input type="checkbox" name="rules" value="매트리스"> 매트리스 위 앉거나 눕지 않음</label>
+      <label><input type="checkbox" name="rules" value="암벽화"> 암벽화 착용 필수</label>
+      <label><input type="checkbox" name="rules" value="질병"> 개인 질병·질환 책임 본인 부담</label>
+      <label><input type="checkbox" name="rules" value="아동"> 아동 이용 시 보호자 책임</label>
+    </div>
+
+    <div class="section">
+      <h3>신청자 정보</h3>
+      <label>볼더링 경력:
+        <select name="bouldering">
+          <option>없음</option>
+          <option>10회 미만</option>
+          <option>3~6개월</option>
+          <option>6~12개월</option>
+          <option>1년 이상</option>
+        </select>
+      </label>
+      <label>클라이밍 경력:
+        <select name="climbing">
+          <option>없음</option>
+          <option>10회 미만</option>
+          <option>3~6개월</option>
+          <option>6~12개월</option>
+          <option>1년 이상</option>
+        </select>
+      </label>
+      <label>신청인 성명: <input type="text" name="applicant"></label>
+      <label>보호자 성명(미성년자 필수): <input type="text" name="guardian"></label>
+      <label>신청일자: <input type="date" name="date"></label>
+    </div>
+
+    <button type="submit" class="submit-btn">제출하기</button>
+  </form>
+
+  <script>
+    document.getElementById("climbingForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("신청서가 제출되었습니다. 감사합니다!");
+    });
+  </script>
+</body>
+</html>
